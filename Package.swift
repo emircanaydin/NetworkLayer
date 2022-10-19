@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "NetworkLayer",
-    platforms: [.iOS("13.0"),
+    platforms: [.iOS("10.0"),
                 .macOS(.v10_12)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.

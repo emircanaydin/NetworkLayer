@@ -24,7 +24,6 @@ final public class ApiManager: ApiManagerProtocol {
         configuration.requestCachePolicy = .reloadIgnoringCacheData
     
         session = Session(configuration: configuration, startRequestsImmediately: true, interceptor: interceptor, eventMonitors: [eventMonitors])
-        session.serverTrustManager?.allHostsMustBeEvaluated = false
     }
     
     public func executeRequest<R>(urlRequestConvertible: URLRequestConvertible) -> Single<R> where R : Decodable, R : Encodable {

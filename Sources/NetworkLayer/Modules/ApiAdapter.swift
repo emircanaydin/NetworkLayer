@@ -31,7 +31,7 @@ final public class ApiAdapter: RequestAdapter {
         }
 
         var currentUrlRequest = URLRequest(url: url)
-        currentUrlRequest.headers = urlRequest.hea
+        currentUrlRequest.headers = urlRequest.headers
         
         completion(.success(currentUrlRequest))
     }

@@ -46,7 +46,7 @@ open class ApiServiceProvider<T: Codable>: URLRequestConvertible {
     }
     
     public func addHeader(header: HTTPHeader) {
-        self.headers.add(header)
+        headers.add(header)
     }
     
     // MARK: - Encoding -

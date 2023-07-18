@@ -30,6 +30,13 @@ final public class ApiAdapter: RequestAdapter {
             return
         }
 
-        completion(.success(URLRequest(url: url)))
+        guard let currentUrlRequest = URLRequest(url: url) else {
+            completion(.success(urlRequest))
+            return
+        }
+        
+        currentUrlRequest.headers = urlRequest.headers
+        
+        completion(.success(currentUrlRequest))
     }
 }

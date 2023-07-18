@@ -41,11 +41,12 @@ open class ApiServiceProvider<T: Codable>: URLRequestConvertible {
         request.headers = headers
         request.cachePolicy = .reloadIgnoringCacheData
         
-//        let encoder = URLEncodedFormParameterEncoder(encoder: URLEncodedFormEncoder(arrayEncoding: .noBrackets))
-//        return try encoder.encode(data, into: request)
-        
         return try encoding.encode(request, with: params)
         
+    }
+    
+    public func addHeader(header: HTTPHeader) {
+        self.headers.add(header)
     }
     
     // MARK: - Encoding -

@@ -67,5 +67,5 @@ open class ApiServiceProvider<T: Codable>: URLRequestConvertible {
         var httpHeaders = HTTPHeaders()
         httpHeaders.add(HTTPHeaderFields.contentType.value)
         return httpHeaders
-    }
+    }()
 }

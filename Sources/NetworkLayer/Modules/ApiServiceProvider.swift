@@ -63,7 +63,7 @@ open class ApiServiceProvider<T: Codable>: URLRequestConvertible {
         return data.asDictionary()
     }
 
-    private var headers: HTTPHeaders {
+    private var headers: HTTPHeaders = {
         var httpHeaders = HTTPHeaders()
         httpHeaders.add(HTTPHeaderFields.contentType.value)
         return httpHeaders
